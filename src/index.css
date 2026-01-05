@@ -1,1 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-['Poppins'] text-gray-600 bg-black;
+  }
+}
+
+@layer components {
+  nav {
+    @apply flex items-center justify-between px-[6%] py-[2%];
+  }
+
+  nav img {
+    @apply w-[150px];
+  }
+
+  .nav-links {
+    @apply flex-1 text-right;
+  }
+
+  .nav-links ul li {
+    @apply inline-block px-3 py-2 relative max-md:block;
+  }
+
+  .nav-links ul li a {
+    @apply text-white text-[13px] no-underline;
+  }
+
+  .nav-links ul li::after {
+    content: "";
+    @apply block mx-auto h-[2px] w-0 bg-red-500 transition-all duration-500;
+  }
+
+  .nav-links ul li:hover::after {
+    @apply w-full;
+  }
+
+  nav .fa {
+    @apply hidden max-md:block text-white text-xl cursor-pointer m-2;
+  }
+
+  @media (max-width: 700px) {
+    .nav-links {
+      @apply fixed top-0 right-[-200px] h-screen w-[200px] bg-red-500 text-left z-20 transition-all duration-1000;
+    }
+
+    .nav-links ul {
+      @apply p-8;
+    }
+  }
+}
