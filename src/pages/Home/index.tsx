@@ -1,6 +1,7 @@
 import CompanyOverview from "./sections/CompanyOverview";
 import Hero from "./sections/Hero";
 import Products from "./sections/Products";
+import Testimonials from "./sections/Testimonials";
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
       <Hero />
       <CompanyOverview />
       <Products />
+      <Testimonials />
     </main>
   );
 }

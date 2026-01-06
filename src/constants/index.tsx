@@ -101,3 +101,48 @@ export const PRODUCT_PREVIEWS = [
     items: ["Carabikang", "Roti Tawar", "Jajanan Tradisional", "Gorengan"],
   },
 ];
+
+export const TESTIMONIALS = [
+  {
+    quote:
+      "Sudah dari kecil makan roti di sini, rasanya tetap sama enaknya. Tempatnya klasik banget, bikin nostalgia. Harganya juga terjangkau!",
+    author: "Ema",
+    role: "Pelanggan Setia",
+    initial: "E",
+  },
+  {
+    quote:
+      "Roti di sini teksturnya padat tapi lembut, aromanya harum mentega. Tidak pakai pengawet jadi lebih sehat. Worth it untuk antri!",
+    author: "Budi Santoso",
+    role: "Warga Bandung",
+    initial: "B",
+  },
+  {
+    quote:
+      "Setiap ke Bandung pasti mampir ke sini. Roti krenten favorit saya, kismisnya banyak dan manisnya pas. Packaging-nya juga masih klasik dengan plastik putih.",
+    author: "Sari Dewi",
+    role: "Wisatawan dari Jakarta",
+    initial: "S",
+  },
+  {
+    quote:
+      "Roti Krenten favorit saya! Kismisnya banyak banget dan manisnya pas. Teksturnya padat tapi lembut, khas Sidodadi.",
+    author: "Sari Dewi",
+    role: "Pelanggan Setia",
+    initial: "S",
+  },
+  {
+    quote:
+      "Horn Cokelat-nya enak banget! Anak-anak suka sekali. Harganya juga terjangkau, worth it untuk kualitasnya.",
+    author: "Budi Santoso",
+    role: "Warga Bandung",
+    initial: "B",
+  },
+  {
+    quote:
+      "Bakso Sapi-nya gurih dan teksturnya khas Sidodadi. Setiap ke Bandung pasti beli banyak untuk oleh-oleh.",
+    author: "Andi Pratama",
+    role: "Wisatawan",
+    initial: "A",
+  },
+];
