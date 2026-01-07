@@ -146,3 +146,140 @@ export const TESTIMONIALS = [
     initial: "A",
   },
 ];
+
+export const PRODUCT_CATEGORIES = [
+  {
+    category: "Roti Manis",
+    items: [
+      {
+        name: "Horn Cokelat",
+        description:
+          "Roti berbentuk tanduk dengan isian cokelat yang manis dan melimpah. Favorit anak-anak dan dewasa.",
+        price: "Rp 5.000 - Rp 8.000",
+        image: "🍞",
+      },
+      {
+        name: "Roti Susu",
+        description:
+          "Roti lembut dengan isian krim susu yang creamy. Tekstur padat namun tetap empuk saat digigit.",
+        price: "Rp 6.000 - Rp 9.000",
+        image: "🥛",
+      },
+      {
+        name: "Pisang Cokelat",
+        description:
+          "Kombinasi sempurna antara pisang dan cokelat dalam satu roti. Manis dan lezat.",
+        price: "Rp 7.000 - Rp 10.000",
+        image: "🍌",
+      },
+      {
+        name: "Krenten (Kismis)",
+        description:
+          "Roti manis dengan isian kismis yang melimpah. Salah satu produk unggulan yang paling dicari.",
+        price: "Rp 6.000 - Rp 9.000",
+        image: "🍇",
+      },
+      {
+        name: "Gula Aren Keju",
+        description:
+          "Perpaduan unik antara gula aren dan keju yang memberikan cita rasa manis-gurih yang khas.",
+        price: "Rp 7.000 - Rp 10.000",
+        image: "🧀",
+      },
+      {
+        name: "Roti Nanas",
+        description:
+          "Roti dengan isian selai nanas yang manis dan segar. Pilihan yang menyegarkan.",
+        price: "Rp 6.000 - Rp 9.000",
+        image: "🍍",
+      },
+      {
+        name: "Roti Srikaya",
+        description:
+          "Roti lembut dengan isian srikaya yang kaya rasa. Cita rasa tradisional yang autentik.",
+        price: "Rp 6.000 - Rp 9.000",
+        image: "🥥",
+      },
+      {
+        name: "Roti Kopi",
+        description:
+          "Roti dengan rasa kopi yang harum. Cocok untuk pecinta kopi yang ingin menikmati roti dengan cita rasa kopi.",
+        price: "Rp 6.000 - Rp 9.000",
+        image: "☕",
+      },
+    ],
+  },
+  {
+    category: "Roti Asin",
+    items: [
+      {
+        name: "Bakso Sapi",
+        description:
+          "Roti dengan isian daging sapi cincang yang gurih. Salah satu produk favorit dengan tekstur padat khas Sidodadi.",
+        price: "Rp 8.000 - Rp 12.000",
+        image: "🥩",
+      },
+      {
+        name: "Kornet Keju",
+        description:
+          "Perpaduan kornet dan keju yang gurih. Cocok bagi pecinta rasa asin dengan kombinasi yang sempurna.",
+        price: "Rp 8.000 - Rp 12.000",
+        image: "🧀",
+      },
+      {
+        name: "Sosis",
+        description:
+          "Roti dengan isian sosis yang lezat. Favorit banyak pelanggan, terutama anak-anak.",
+        price: "Rp 7.000 - Rp 11.000",
+        image: "🌭",
+      },
+      {
+        name: "Smoked Beef",
+        description:
+          "Roti dengan isian daging asap yang memberikan cita rasa khas. Pilihan yang memuaskan.",
+        price: "Rp 9.000 - Rp 13.000",
+        image: "🥓",
+      },
+      {
+        name: "Bakso Ayam",
+        description:
+          "Varian bakso dengan daging ayam. Alternatif yang lezat untuk pecinta roti asin.",
+        price: "Rp 7.000 - Rp 11.000",
+        image: "🍗",
+      },
+    ],
+  },
+  {
+    category: "Roti Tawar & Kue Tradisional",
+    items: [
+      {
+        name: "Roti Tawar",
+        description:
+          "Roti tawar dengan tekstur empuk dan rasa yang lezat. Dapat dinikmati dengan berbagai topping atau selai.",
+        price: "Rp 15.000 - Rp 25.000",
+        image: "🍞",
+      },
+      {
+        name: "Carabikang",
+        description:
+          "Kue tradisional khas Bandung. Kue berbahan dasar beras dengan cita rasa manis yang khas.",
+        price: "Rp 3.000 - Rp 5.000",
+        image: "🍰",
+      },
+      {
+        name: "Jajanan Tradisional",
+        description:
+          "Berbagai macam jajanan tradisional khas Bandung. Pilihan yang beragam untuk dinikmati.",
+        price: "Rp 2.000 - Rp 8.000",
+        image: "🥮",
+      },
+      {
+        name: "Gorengan",
+        description:
+          "Berbagai macam gorengan yang renyah dan lezat. Teman yang cocok untuk roti atau camilan.",
+        price: "Rp 2.000 - Rp 5.000",
+        image: "🍤",
+      },
+    ],
+  },
+];
