@@ -283,3 +283,14 @@ export const PRODUCT_CATEGORIES = [
     ],
   },
 ];
+
+export const bakeryRoles = [
+  "Ahli Roti",
+  "Pembuat Roti",
+  "Kasir",
+  "Manajer Toko",
+  "Pembuat Kue",
+  "Staf Produksi",
+  "Quality Control",
+  "Pelayan Toko",
+];

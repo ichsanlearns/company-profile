@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { TeamCard } from "../../../components/TeamCard";
+import { bakeryRoles } from "../../../constants";
 
 interface TeamMember {
   name: {
@@ -20,21 +21,10 @@ interface TeamMember {
   role: string;
 }
 
-const bakeryRoles = [
-  "Ahli Roti",
-  "Pembuat Roti",
-  "Kasir",
-  "Manajer Toko",
-  "Pembuat Kue",
-  "Staf Produksi",
-  "Quality Control",
-  "Pelayan Toko",
-];
-
 function TeamList() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
@@ -50,9 +40,7 @@ function TeamList() {
         );
 
         setTeamMembers(membersWithRoles);
-        setError(null);
       } catch (err) {
-        setError("Gagal memuat data tim. Silakan coba lagi nanti.");
         console.error("Error fetching team members:", err);
       } finally {
         setLoading(false);
