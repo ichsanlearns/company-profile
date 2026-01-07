@@ -1,9 +1,7 @@
+import TeamList from "./sections/TeamList";
+
 function Teams() {
-  return (
-    <section className="flex items-center justify-center min-h-lvh text-black">
-      Teams
-    </section>
-  );
+  return <TeamList />;
 }
 
 export default Teams;
