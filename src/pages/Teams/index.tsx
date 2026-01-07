@@ -1,5 +1,9 @@
 function Teams() {
-  return <section>Teams</section>;
+  return (
+    <section className="flex items-center justify-center min-h-lvh text-black">
+      Teams
+    </section>
+  );
 }
 
 export default Teams;

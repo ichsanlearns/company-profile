@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 function Root() {
   return (
-    <>
+    <div>
       <header>
         <NavBar />
       </header>
@@ -12,7 +12,7 @@ function Root() {
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

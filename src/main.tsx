@@ -10,6 +10,7 @@ import Teams from "./pages/Teams";
 import BlogList from "./pages/BlogList";
 import CreateBlog from "./pages/CreateBlog";
 import Products from "./pages/Home/sections/Products";
+import Login from "./pages/auth/Login";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -22,6 +23,9 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/teams" element={<Teams />} />
           <Route path="/bloglist" element={<BlogList />} />
           <Route path="/createblog" element={<CreateBlog />} />
+        </Route>
+        <Route>
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>
