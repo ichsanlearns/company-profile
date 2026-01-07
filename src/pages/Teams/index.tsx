@@ -1,5 +1,7 @@
+import TeamList from "./sections/TeamList";
+
 function Teams() {
-  return <section>Teams</section>;
+  return <TeamList />;
 }
 
 export default Teams;
