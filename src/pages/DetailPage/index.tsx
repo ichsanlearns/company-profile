@@ -6,7 +6,6 @@ import type { IBlogInput } from "../../types/blogtype";
 
 function DetailPage() {
   const params = useParams();
-  const navigate = useNavigate();
 
   const [blog, setBlog] = useState<IBlogInput | null>(null);
 

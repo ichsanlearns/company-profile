@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 
 interface RegisterFormValues {
   email: string;
@@ -14,8 +13,6 @@ function SignUp() {
     email: "",
     password: "",
   };
-
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (values: RegisterFormValues) => {
     try {

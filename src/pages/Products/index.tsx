@@ -1,4 +1,3 @@
-import { ProductCard } from "../../components/ProductCard";
 import { PRODUCT_CATEGORIES } from "../../constants";
 
 function Services() {

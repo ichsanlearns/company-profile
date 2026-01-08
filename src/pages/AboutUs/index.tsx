@@ -1,11 +1,6 @@
 import { MilestoneCard } from "../../components/MilestoneCard";
 import { SectionHeader } from "../../components/SectionHeader";
-import {
-  COMPANY_INFO,
-  MILESTONES,
-  PHILOSOPHY_POINTS,
-  UNIQUE_FEATURES,
-} from "../../constants";
+import { COMPANY_INFO, MILESTONES, PHILOSOPHY_POINTS } from "../../constants";
 
 function AboutUs() {
   return (

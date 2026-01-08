@@ -27,7 +27,7 @@ function NavBar() {
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center shadow-lg">
+            <div className="w-14 h-14 bg-linear-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-2xl">S</span>
             </div>
             <div className="flex flex-col">

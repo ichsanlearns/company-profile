@@ -1,5 +1,3 @@
-import { COMPANY_INFO } from "../constants";
-
 function Footer() {
   return (
     <footer className="py-20 bg-gradient-to-r from-amber-600 to-amber-700 text-white">
