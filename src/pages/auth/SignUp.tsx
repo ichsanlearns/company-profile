@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
 
 interface RegisterFormValues {
   email: string;
