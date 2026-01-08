@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Link, useParams, useNavigate } from "react-router";
+import { Link, useParams } from "react-router";
 
 import type { IBlogInput } from "../../types/blogtype";
 
