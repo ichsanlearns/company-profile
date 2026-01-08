@@ -294,3 +294,79 @@ export const bakeryRoles = [
   "Quality Control",
   "Pelayan Toko",
 ];
+
+export const PHILOSOPHY_POINTS = [
+  {
+    title: "Kualitas Tanpa Kompromi",
+    description:
+      "Sejak awal berdiri, Toko Roti Sidodadi berkomitmen untuk menjaga kualitas produknya dengan menggunakan bahan-bahan alami dan proses pembuatan tradisional.",
+    items: [
+      "100% bahan alami, tanpa pengawet",
+      "Metode tradisional panggang arang",
+      "Diuleni tangan dengan penuh perhatian",
+      "Tekstur padat namun lembut",
+    ],
+  },
+  {
+    title: "Aksesibilitas untuk Semua",
+    description:
+      "Sejak awal, visi kami adalah membuat roti berkualitas dapat dinikmati oleh semua lapisan masyarakat, bukan hanya kalangan tertentu.",
+    items: [
+      "Harga terjangkau untuk semua",
+      "Kualitas premium dengan harga wajar",
+      "Melayani semua kalangan dengan ramah",
+      "Mempertahankan tradisi untuk generasi mendatang",
+    ],
+  },
+];
+
+export const MILESTONES = [
+  {
+    year: "1954",
+    title: "Pendirian Toko",
+    description:
+      "Hiendrawan Kosasih mendirikan Toko Roti Sidodadi pada 10 Mei 1954 dengan visi menyediakan roti berkualitas untuk semua lapisan masyarakat.",
+  },
+  {
+    year: "1950s",
+    title: "Metode Tradisional",
+    description:
+      "Mempertahankan metode pembuatan tradisional: panggang arang dan diuleni tangan, tanpa bahan pengawet atau pelembut.",
+  },
+  {
+    year: "1970s",
+    title: "Menjadi Favorit Warga",
+    description:
+      "Toko semakin dikenal dan menjadi favorit warga Bandung karena kualitas dan harga yang terjangkau.",
+  },
+  {
+    year: "2000s",
+    title: "Destinasi Wisata Kuliner",
+    description:
+      "Menjadi destinasi wisata kuliner yang populer, dikunjungi oleh wisatawan yang mencari nostalgia dan cita rasa autentik.",
+  },
+  {
+    year: "2024",
+    title: "Tetap Setia pada Tradisi",
+    description:
+      "Setelah lebih dari 70 tahun, Toko Roti Sidodadi tetap mempertahankan resep tradisional dan komitmen terhadap kualitas, menjadi ikon kuliner Bandung yang abadi.",
+  },
+];
+
+export const UNIQUE_FEATURES = [
+  {
+    title: "Kemasan Klasik",
+    description:
+      'Salah satu ciri khas Toko Roti Sidodadi adalah kemasan plastik berwarna putih dengan gambar perempuan membawa roti tawar dan tulisan "Toko Roti dan Kuweh SIDODADI". Di bagian bawah kemasan terdapat imbauan seperti "Jadilah Peserta KB Lestari" dan "Buanglah Sampah pada Tempatnya". Kemasan klasik ini menjadi bagian dari identitas toko yang tidak berubah selama puluhan tahun.',
+  },
+  {
+    title: "Sistem Pemesanan Manual",
+    description:
+      "Toko Roti Sidodadi masih menggunakan sistem pemesanan manual yang tradisional. Pembeli menulis pesanan di sehelai kertas yang disediakan oleh pihak toko. Sistem ini menambah kesan klasik dan personal dalam berbelanja, mengingatkan pada cara berbelanja di masa lalu.",
+  },
+  {
+    title: "Antrian Panjang",
+    description:
+      "Popularitas Toko Roti Sidodadi membuat toko ini sering ramai dengan antrian panjang, terutama di akhir pekan. Banyak pelanggan yang rela antri untuk mendapatkan roti favorit mereka. Ini menjadi bukti bahwa kualitas dan cita rasa autentik tetap menjadi daya tarik utama.",
+  },
+];

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import type { IBlogInput } from "../../types/blogtype";
-import { useAuthStore } from "../../store/authStore";
 
 function BlogList() {
+  const [isLoading, setIsLoading] = useState(true);
   const [blogs, setBlogs] = useState<IBlogInput[] | null>(null);
 
   useEffect(() => {
@@ -13,10 +13,11 @@ function BlogList() {
       const data = await response.json();
 
       setBlogs(data);
+      setIsLoading(false);
     }
 
     getBlogList();
-  }, []);
+  }, [isLoading]);
 
   return (
     <section className="py-20 bg-amber-50 mt-20">
@@ -62,10 +63,20 @@ function BlogList() {
             </article>
           ))}
         </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-gray-600">Menampilkan {blogs?.length} artikel</p>
-        </div>
+        {isLoading ? (
+          <div className="flex flex-col justify-center items-center">
+            <div className="w-17 h-17 border-b-3 border-amber-400 mb-4 rounded-full animate-spin"></div>
+            <span>Memuat data blog...</span>
+          </div>
+        ) : (
+          <div className="flex justify-center">
+            <div className="mt-12 text-center w-50 border-amber-500 border-2 rounded-2xl">
+              <p className="text-gray-600">
+                Menampilkan {blogs?.length} artikel
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
