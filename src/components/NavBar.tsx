@@ -121,7 +121,6 @@ function NavBar() {
             >
               Tulis Blog
             </Link>
-
             {!email ? (
               <Link
                 to="/login"
@@ -276,7 +275,6 @@ function NavBar() {
           >
             Tulis Blog
           </Link>
-
           {!email ? (
             <Link
               to="/login"
