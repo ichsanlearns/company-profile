@@ -1,7 +1,9 @@
 import { Link, useLocation } from "react-router";
 import { useState, useEffect } from "react";
+import { useAuthStore } from "../store/authStore";
 
 function NavBar() {
+  const { email, clearEmail } = useAuthStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -18,11 +20,11 @@ function NavBar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${
         isScrolled ? "bg-white shadow-lg" : "bg-amber-900/90"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
@@ -148,6 +150,28 @@ function NavBar() {
             </svg>
           </button>
         </div>
+        {email ? (
+          <div className="flex border mb-2 border-amber-400 rounded-2xl">
+            <div className="w-[30%]"></div>
+            <p
+              className={`text-center w-[40%] pt-4 mb-2 ${
+                isScrolled ? `text-amber-500` : "text-white"
+              }`}
+            >
+              Welcome {email}
+            </p>
+            <div className="w-[30%] flex justify-end">
+              <button
+                onClick={clearEmail}
+                className="p-4 text-white text-end cursor-pointer"
+              >
+                logout
+              </button>
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
 
       {/* Mobile Navigation */}
