@@ -123,6 +123,23 @@ function NavBar() {
             >
               Tulis Blog
             </Link>
+            {/* ------------------------------------------------ */}
+            {!email ? (
+              <Link
+                to="/login"
+                className={`px-4 py-2 rounded-lg transition-all duration-200 ${
+                  isActive("/createblog")
+                    ? "bg-amber-700 text-white"
+                    : isScrolled
+                    ? "text-gray-700 hover:bg-amber-50"
+                    : "text-white hover:bg-white/10"
+                }`}
+              >
+                Login
+              </Link>
+            ) : (
+              <div></div>
+            )}
           </div>
 
           <button
@@ -261,6 +278,24 @@ function NavBar() {
           >
             Tulis Blog
           </Link>
+          {/* ------------------------------------------------ */}
+          {!email ? (
+            <Link
+              to="/login"
+              onClick={() => setIsMenuOpen(false)}
+              className={`block px-4 py-3 rounded-lg transition-colors ${
+                isActive("/createblog")
+                  ? "bg-amber-700 text-white"
+                  : isScrolled
+                  ? "text-gray-700 hover:bg-amber-50"
+                  : "text-white hover:bg-white/10"
+              }`}
+            >
+              Login
+            </Link>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
     </nav>
