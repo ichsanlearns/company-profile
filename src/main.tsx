@@ -12,6 +12,7 @@ import CreateBlog from "./pages/CreateBlog";
 import Login from "./pages/auth/Login";
 import SignUp from "./pages/auth/SignUp";
 import Services from "./pages/Products";
+import DetailPage from "./pages/DetailPage";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -28,6 +29,7 @@ createRoot(document.getElementById("root")!).render(
         <Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/detailblog/:id" element={<DetailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

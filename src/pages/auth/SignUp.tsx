@@ -19,16 +19,13 @@ function SignUp() {
 
   const handleSubmit = async (values: RegisterFormValues) => {
     try {
-      const response = await fetch(
-        "https://healthyrange-us.backendless.app/api/data/user",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(values),
-        }
-      );
+      const response = await fetch(import.meta.env.VITE_API_USER, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
 
       alert("Sign Up successful");
       navigate("/login");

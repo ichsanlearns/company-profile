@@ -1,5 +1,4 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
 import { useAuthStore } from "../../store/authStore";
 import type { IBlogInput } from "../../types/blogtype";
 import { useNavigate } from "react-router";
@@ -25,16 +24,13 @@ function CreateBlog() {
     };
 
     try {
-      const response = await fetch(
-        "https://healthyrange-us.backendless.app/api/data/blog",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payloads),
-        }
-      );
+      const response = await fetch(import.meta.env.VITE_API_BLOG, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payloads),
+      });
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));

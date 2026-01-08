@@ -19,7 +19,9 @@ function Login() {
   const handleSubmit = async (values: ILoginFormValues) => {
     try {
       const response = await fetch(
-        `https://healthyrange-us.backendless.app/api/data/user?where=email%3D'${values.email}'AND%20password%3D'${values.password}'`
+        `${import.meta.env.VITE_API_USER}?where=email%3D'${
+          values.email
+        }'AND%20password%3D'${values.password}'`
       );
       const data = await response.json();
 

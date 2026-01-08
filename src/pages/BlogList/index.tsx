@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { IBlogInput } from "../../types/blogtype";
+import { Link } from "react-router";
 
 function BlogList() {
   const [isLoading, setIsLoading] = useState(true);
@@ -7,9 +8,7 @@ function BlogList() {
 
   useEffect(() => {
     async function getBlogList() {
-      const response = await fetch(
-        "https://healthyrange-us.backendless.app/api/data/blog"
-      );
+      const response = await fetch(import.meta.env.VITE_API_BLOG);
       const data = await response.json();
 
       setBlogs(data);
@@ -24,7 +23,10 @@ function BlogList() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-4">
           {blogs?.map((blog) => (
-            <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden">
+            <Link
+              to={`/detailblog/${blog.objectId}`}
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden"
+            >
               {/*  */}
               <div className=" border-t border-gray-200 pt-4">
                 <div className="mx-10 flex items-center justify-between">
@@ -60,7 +62,7 @@ function BlogList() {
                   </div>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
         {isLoading ? (

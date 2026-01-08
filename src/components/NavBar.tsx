@@ -125,7 +125,6 @@ function NavBar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
@@ -178,7 +177,6 @@ function NavBar() {
         )}
       </div>
 
-      {/* Mobile Navigation */}
       <div
         className={`md:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
