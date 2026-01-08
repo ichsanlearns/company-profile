@@ -26,7 +26,6 @@ function NavBar() {
     >
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-2xl">S</span>
@@ -49,7 +48,6 @@ function NavBar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             <Link
               to="/"
@@ -123,6 +121,23 @@ function NavBar() {
             >
               Tulis Blog
             </Link>
+
+            {!email ? (
+              <Link
+                to="/login"
+                className={`px-4 py-2 rounded-lg transition-all duration-200 ${
+                  isActive("/createblog")
+                    ? "bg-amber-700 text-white"
+                    : isScrolled
+                    ? "text-gray-700 hover:bg-amber-50"
+                    : "text-white hover:bg-white/10"
+                }`}
+              >
+                Login
+              </Link>
+            ) : (
+              <div></div>
+            )}
           </div>
 
           <button
@@ -261,6 +276,24 @@ function NavBar() {
           >
             Tulis Blog
           </Link>
+
+          {!email ? (
+            <Link
+              to="/login"
+              onClick={() => setIsMenuOpen(false)}
+              className={`block px-4 py-3 rounded-lg transition-colors ${
+                isActive("/createblog")
+                  ? "bg-amber-700 text-white"
+                  : isScrolled
+                  ? "text-gray-700 hover:bg-amber-50"
+                  : "text-white hover:bg-white/10"
+              }`}
+            >
+              Login
+            </Link>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
     </nav>

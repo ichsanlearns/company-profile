@@ -27,7 +27,6 @@ function BlogList() {
               to={`/detailblog/${blog.objectId}`}
               className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden"
             >
-              {/*  */}
               <div className=" border-t border-gray-200 pt-4">
                 <div className="mx-10 flex items-center justify-between">
                   <div className=" flex items-center">
@@ -45,7 +44,7 @@ function BlogList() {
                   </div>
                 </div>
               </div>
-              {/*  */}
+
               <div className="p-6 ">
                 <div className="mb-4 ">
                   <h2 className="text-2xl font-bold text-gray-900 mb-3 line-clamp-2 text-center">
