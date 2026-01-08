@@ -1,8 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-import * as Yup from "yup";
-
-import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { useAuthStore } from "../../store/authStore";
 
@@ -46,7 +43,7 @@ function Login() {
       }}
       className="bg-[#ECBC76] h-175 flex items-center justify-center min-h-lvh"
     >
-      <div className="flex flex-col  items-center justify-center justify-between bg-white w-134.75 h-185.25 rounded-4xl px-[44px] drop-shadow-2xl">
+      <div className="flex flex-col  items-center justify-center justify-between bg-white w-134.75 h-185.25 rounded-4xl px-11 drop-shadow-2xl">
         <Formik initialValues={initialValues} onSubmit={handleSubmit}>
           {() => (
             <Form>
@@ -72,7 +69,7 @@ function Login() {
                     Enter your email
                   </label>
                   <Field
-                    className="border border-[#4285F4] p-[19px] rounded-[9px] w-full h-[57px]"
+                    className="border border-[#4285F4] p-4.75 rounded-[9px] w-full h-[57px]"
                     type="email"
                     name="email"
                     autoComplete="email"

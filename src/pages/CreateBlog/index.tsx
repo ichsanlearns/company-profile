@@ -1,16 +1,13 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useAuthStore } from "../../store/authStore";
-
-interface IBlogInput {
-  title: string;
-  tags: string;
-  creator: string;
-  content: string;
-  datetime: string;
-}
+import type { IBlogInput } from "../../types/blogtype";
+import { useNavigate } from "react-router";
+import { useEffect } from "react";
 
 function CreateBlog() {
+  const navigate = useNavigate();
+
   const { email } = useAuthStore();
   const initialValues: IBlogInput = {
     title: "",
@@ -50,6 +47,14 @@ function CreateBlog() {
       alert(error.message);
     }
   };
+
+  useEffect(() => {
+    if (!email) {
+      navigate("/login", { replace: true });
+    }
+  }, [email, navigate]);
+
+  if (!email) return null; // render nothing while redirecting
 
   return (
     <section className="py-12 mt-10">
