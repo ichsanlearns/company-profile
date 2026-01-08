@@ -163,7 +163,11 @@ function NavBar() {
             <div className="w-[30%] flex justify-end">
               <button
                 onClick={clearEmail}
-                className="p-4 text-white text-end cursor-pointer"
+                className={`rounded-2xl p-4 text-end cursor-pointer ${
+                  isScrolled
+                    ? `text-white bg-amber-500`
+                    : `text-amber-500 bg-white`
+                } `}
               >
                 logout
               </button>
