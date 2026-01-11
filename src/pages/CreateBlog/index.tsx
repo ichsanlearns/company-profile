@@ -79,7 +79,7 @@ function CreateBlog() {
                     name="title"
                     autoComplete="title"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                    placeholder="Masukkan judul artikel..."
+                    placeholder="Masukkan judul blog..."
                   />
                 </div>
 
@@ -101,10 +101,6 @@ function CreateBlog() {
                     placeholder="Tulis konten artikel Anda di sini... Anda bisa menulis tentang roti tradisional, tips membuat roti, sejarah Toko Roti Sidodadi, atau topik lainnya yang relevan."
                     required
                   />
-                  <p className="mt-2 text-sm text-gray-500">
-                    Tips: Anda bisa menggunakan format teks biasa atau Markdown
-                    untuk pemformatan (contoh: **tebal**, *miring*, # judul)
-                  </p>
                 </div>
 
                 <div>
@@ -120,11 +116,8 @@ function CreateBlog() {
                     name="tags"
                     autoComplete="tags"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                    placeholder="Masukkan tag dipisahkan dengan koma (contoh: roti tradisional, resep, tips)"
+                    placeholder="Masukkan tag untuk blog"
                   />
-                  <p className="mt-2 text-sm text-gray-500">
-                    Pisahkan beberapa tag dengan koma
-                  </p>
                 </div>
 
                 <div className="flex items-center justify-between pt-4 border-t border-gray-200">

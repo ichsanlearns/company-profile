@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Formik, Form, Field } from "formik";
-import { Link, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 
 import type { IBlogInput } from "../../types/blogtype";
 import { useAuthStore } from "../../store/authStore";
@@ -12,6 +12,7 @@ const initialValues: IBlogInput = {
 };
 
 function DetailPage() {
+  const navigate = useNavigate();
   const params = useParams();
   const { email } = useAuthStore();
 
@@ -48,7 +49,7 @@ function DetailPage() {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_DOMAIN}/${params.id}`,
+        `${import.meta.env.VITE_API_BLOG}/${params.id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -62,9 +63,34 @@ function DetailPage() {
       setIsEditing(false);
       alert("Post berhasil di update!");
     } catch (error) {
-      alert("Masih Error pak🙏.");
+      alert("Error, gagal menghapus post.");
     } finally {
       setIsLoadingForm(false);
+    }
+  }
+
+  async function handleDelete() {
+    const confirmDelete = confirm("Apakah kamu yakin akan menghapus post ini?");
+    if (!confirmDelete) return;
+
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BLOG}/${params.id}`,
+        {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Delete failed: ${response.status}`);
+      }
+
+      alert("Post berhasil dihapus");
+      navigate("/bloglist");
+    } catch (error) {
+      console.error("Gagal menghapus post", error);
+      alert("Gagal menghapus");
     }
   }
 
@@ -187,11 +213,12 @@ function DetailPage() {
                   </button>
 
                   <button
+                    onClick={handleDelete}
                     className="
                       bg-white border border-red-400
                       px-4 py-2 rounded-lg
                       text-red-600 font-semibold
-                      cursor-not-allowed
+                      cursor-pointer
                     "
                   >
                     Delete
